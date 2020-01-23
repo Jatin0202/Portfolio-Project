@@ -1,0 +1,39 @@
+{% extends 'base.html'   %}
+
+{% block content  %}
+
+
+<div id="myCarousel" class="carousel slide pt-20 container" data-ride="carousel">
+
+
+{% for project in Projects.all %}
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+          <a href="{%  url 'detail' project.id %}"><h1 class="featurette-heading text-center text-primary">{{  project.title   }} </h1></a>
+        <p class="lead">{{ project.summary }}</p>
+      </div>
+        <br>
+        <br>
+      <div class="col-md-5">
+        <img class ="img-fluid" src={{ project.image.url }}    width="500" height="500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+{% endfor  %}
+
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+
+
+{% endblock %}

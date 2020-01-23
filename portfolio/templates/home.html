@@ -1,0 +1,42 @@
+{% extends 'base.html'   %}
+
+{% block content  %}
+      {% load staticfiles %}
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <img src="{% static 'jatin.jpg'  %}">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal text-primary">Jatin Dhingra</h1>
+    <p class="lead font-weight-normal">Hi, my name is Jatin Dhingra.<br> I'm from Panipat,Haryana. <br>I'm currently studying in IIT,Guwahati</p>
+    <a class="btn btn-primary" href="mailto: jatindhingra009@gmail.com">Email me</a>
+  </div>
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<div class="container">
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <a href="{% url 'project' %}">
+      <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Projects</h2>
+      <p class="lead">Check out projects done by me.They are really interesting.</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+  </div>
+  </a>
+  <a href="{% url 'blog'  %}">
+  <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Blogs</h2>
+      <p class="lead">Here are some of my blogs.I just started writing down.</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
+  </div>
+  </a>
+</div>
+</div>
+</div>
+
+{% endblock %}
